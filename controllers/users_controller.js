@@ -8,7 +8,7 @@ module.exports.profile= function(req, res){
                 return res.render('user_profile',{
                     title:'User Profile',
                     user: user,
-                    
+
                 });
             }
             return res.redirect('/users/sign-in');
@@ -16,9 +16,6 @@ module.exports.profile= function(req, res){
     }else{
         return res.redirect('/users/sign-in')
     }
-
-
-
     
 }
 
@@ -88,13 +85,11 @@ module.exports.createSession =function(req,res){
             return res.redirect('back');
         }
 
-    })
+    })   
+}
 
-
-
-
-    
-
-
-    
+//Adding sign-out 
+module.exports.signOut=function(req,res){
+     res.clearCookie('user_id');
+     return res.redirect('/users/sign-in');   
 }
