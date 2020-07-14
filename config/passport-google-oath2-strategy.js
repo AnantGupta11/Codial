@@ -16,6 +16,7 @@ passport.use(new googleStrategy({
             if(err){
                 console.log("Error in google strstegy",err);
                 return;
+            }
 
                 console.log(profile);
                 if(user){
@@ -36,7 +37,7 @@ passport.use(new googleStrategy({
                     })
                 }
             }
-        })
+        )
     }
 
 ))
