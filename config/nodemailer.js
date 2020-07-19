@@ -1,15 +1,22 @@
 const nodemailer= require('nodemailer');
+const ejs=require('ejs');
 const path= require('path');
+
+const { getMaxListeners } = require('process');
 
 let transporter = nodemailer.createTransport({
     service: 'gmail',
-    host: "smtp.ethereal.email",
+    host: 'smtp.gmail.com',
     port: 587,
     secure: false, // true for 465, false for other ports
     auth: {
-      user: sanant91225, // generated ethereal user
-      pass: Anant/123, // generated ethereal password
+       user: 'Ak8002749@gmail.com', // generated ethereal user
+       pass: '321@tnanA' // generated ethereal password
     },
+    tls: {
+        rejectUnauthorized: false
+    }
+
 });
 
 let renderTemplate= (data, relativePath)=>{
