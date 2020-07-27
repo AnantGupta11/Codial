@@ -66,3 +66,5 @@
 ::1 - - [27/Jul/2020:11:51:39 +0000] "GET / HTTP/1.1" 200 7561 "http://localhost:8000/users/sign-in" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36"
 ::1 - - [27/Jul/2020:11:51:43 +0000] "POST /likes/toggle/?id=5f1e5717ef47523b8c1a2383&type=Post HTTP/1.1" 200 57 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36"
 ::1 - - [27/Jul/2020:11:51:53 +0000] "POST /likes/toggle/?id=5f1e4ae74fee7d1ce8672c5f&type=Post HTTP/1.1" 200 56 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36"
+::1 - - [27/Jul/2020:12:23:43 +0000] "GET / HTTP/1.1" 200 7285 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36"
+::1 - - [27/Jul/2020:12:24:03 +0000] "POST /posts/create HTTP/1.1" 200 281 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36"
