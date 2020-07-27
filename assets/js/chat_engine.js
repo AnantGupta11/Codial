@@ -1,31 +1,37 @@
 class ChatEngine{
     constructor(chatBoxId, userEmail){
-        this.chatBox= $(`#${chatBoxId}`);
-        this.userEmail= userEmail;
+        this.chatBox = $(`#${chatBoxId}`);
+        this.userEmail = userEmail;
 
-        this.socket=io.connect('http://100.25.131.156/:5000');
+        this.socket = io.connect('http://100.25.131.156/:5000');
 
-        if(this.userEmail){
+        if (this.userEmail){
             this.connectionHandler();
         }
+
     }
 
-    connectionHandler() {
-        let self=this;
+
+    connectionHandler(){
+        let self = this;
 
         this.socket.on('connect', function(){
-            console.log('Connection Establish using Socket ..');
+            console.log('connection established using sockets...!');
 
-            self.socket.emit('join_room',{
-                user_email:self.userEmail,
+
+            self.socket.emit('join_room', {
+                user_email: self.userEmail,
                 chatroom: 'codeial'
             });
 
-            self.socket.on('user_joined',function(data){
-                console.log('A user joined',data);
+            self.socket.on('user_joined', function(data){
+                console.log('a user joined!', data);
             })
-        });   
-        // Send a message on clicking on send message button
+
+
+        });
+
+        // CHANGE :: send a message on clicking the send message button
         $('#send-message').click(function(){
             let msg = $('#chat-message-input').val();
 
@@ -62,6 +68,5 @@ class ChatEngine{
 
             $('#chat-messages-list').append(newMessage);
         })
-
     }
 }
